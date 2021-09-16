@@ -1,4 +1,14 @@
-
 body {
   background: url('./assets/background.svg');
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#squid-logo {
+  font-size: 100px;
+  height: 15vh;
 }

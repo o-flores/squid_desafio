@@ -6,8 +6,8 @@ import PostsContainer from './components/PostsContainer';
 
 function App() {
   return (
-    <div>
-      <img src={Logo} alt="Squid Logo" />
+    <div id="main">
+      <img src={Logo} alt="Squid Logo" id="squid-logo" />
       <PostsContainer />
     </div>
   );
