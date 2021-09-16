@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
 function PostCard({
   imagens, legenda, username, comentarios, upvotes, criadoEm,
 }) {
   return (
-    <div>
+    <div className="post-card">
       <img
         src={imagens.thumbnail.url}
         alt={legenda}
-        style={{ width: '150px', height: '150px' }}
       />
-      <div>
+      <div className="post-infos">
         <span>{`@${username}`}</span>
         <span>{upvotes}</span>
         <span>{comentarios}</span>

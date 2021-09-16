@@ -1,0 +1,12 @@
+.post-card {
+  transform: scale(0.95);
+}
+
+.post-card img {
+  width: 150px;
+  height: 150px;
+}
+
+.post-infos {
+  display: none;
+}
