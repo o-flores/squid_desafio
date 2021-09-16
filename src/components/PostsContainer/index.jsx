@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PostCard from '../PostCard';
 import MockPosts from './post';
 
 function PostsContainer() {
@@ -18,9 +19,13 @@ function PostsContainer() {
     // fetchPosts();
     setPosts(MockPosts)
   }, []);
-
+  console.log(posts[0]);
   return (
-    <div>hello world</div>
+    <div>
+      {posts.length > 0 && posts.map((post) => (
+        <PostCard key={post.uid} {...post}/>
+      ))}
+    </div>
   );
 }
 
