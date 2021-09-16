@@ -19,15 +19,22 @@ function PostsContainer() {
     }
     fetchPosts();
   }, []);
-  console.log(posts[0]);
+
+  console.log(posts[9]);
   return (
     <div>
       {error && 'Houve um erro, por favor tente novamente mais tarde'}
-      {posts.length > 0 && posts.map(({ uid, legenda, imagens }) => (
+      {posts.length > 0 && posts.map(({
+        uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm,
+      }) => (
         <PostCard
           key={uid}
           legenda={legenda}
           imagens={imagens}
+          username={username}
+          comentarios={comentarios}
+          upvotes={upvotes}
+          criadoEm={criadoEm}
         />
       ))}
     </div>
