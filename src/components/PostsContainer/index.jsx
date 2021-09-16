@@ -17,13 +17,17 @@ function PostsContainer() {
     //   }
     // }
     // fetchPosts();
-    setPosts(MockPosts)
+    setPosts(MockPosts);
   }, []);
   console.log(posts[0]);
   return (
     <div>
-      {posts.length > 0 && posts.map((post) => (
-        <PostCard key={post.uid} {...post}/>
+      {posts.length > 0 && posts.map(({ uid, legenda, imagens }) => (
+        <PostCard
+          key={uid}
+          legenda={legenda}
+          imagens={imagens}
+        />
       ))}
     </div>
   );
