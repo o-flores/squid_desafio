@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PostCard({ imagens, legenda }) {
+function PostCard({
+  imagens, legenda, username, comentarios, upvotes, criadoEm,
+}) {
   return (
-    <img
-      src={imagens.thumbnail.url}
-      alt={legenda}
-      style={{ width: '150px', height: '150px' }}
-    />
+    <div>
+      <img
+        src={imagens.thumbnail.url}
+        alt={legenda}
+        style={{ width: '150px', height: '150px' }}
+      />
+      <div>
+        <span>{`@${username}`}</span>
+        <span>{upvotes}</span>
+        <span>{comentarios}</span>
+        <span>{criadoEm}</span>
+      </div>
+    </div>
   );
 }
 
@@ -24,6 +34,10 @@ PostCard.propTypes = {
     thumbnail: imagesType,
   }),
   legenda: PropTypes.string,
+  username: PropTypes.string,
+  comentarios: PropTypes.string,
+  upvotes: PropTypes.string,
+  criadoEm: PropTypes.string,
 }.isRequired;
 
 export default PostCard;
