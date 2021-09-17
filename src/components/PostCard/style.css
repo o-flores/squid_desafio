@@ -42,3 +42,19 @@
   0% { opacity: 0 }
   100% { opacity: 1 }
 }
+
+@media screen and (min-width: 992px)  {
+  .post-card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .post-card:hover .post-infos {
+    height: 200px;
+    width: 200px;
+  }
+
+  .post-infos p {
+    font-size: 20px;
+  }
+}
