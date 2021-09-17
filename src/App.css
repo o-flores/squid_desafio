@@ -21,3 +21,15 @@ body {
 #squid-logo {
   width: 400px;
 }
+
+@media screen and (max-width: 576px)  {
+  #squid-logo {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 992px)  {
+  #squid-logo {
+    width: 500px;
+  }
+}
