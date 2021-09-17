@@ -4,6 +4,7 @@
   margin: auto;
   flex-wrap: wrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .error-message {
@@ -46,5 +47,11 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .post-container {
+    width: 90vw;
   }
 }
