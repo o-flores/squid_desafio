@@ -17,12 +17,14 @@
   z-index: 5;
   display: flex;
   color: white;
-  background: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
   height: 150px;
   width: 150px;
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  animation: fade-in 0.3s;
 }
 
 .post-infos p {
@@ -33,4 +35,9 @@
 
 .icon {
   margin-right: 5px;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
