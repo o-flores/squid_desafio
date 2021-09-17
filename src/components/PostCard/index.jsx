@@ -1,4 +1,6 @@
 import React from 'react';
+import { AiTwotoneHeart } from 'react-icons/ai';
+import { FaComment, FaCalendarAlt } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import './style.css';
 
@@ -19,9 +21,18 @@ function PostCard({
         />
         <div className="post-infos">
           <p>{`@${username}`}</p>
-          <p>{upvotes}</p>
-          <p>{comentarios}</p>
-          <p>{createdAt}</p>
+          <p>
+            <span className="icon"><AiTwotoneHeart /></span>
+            {upvotes}
+          </p>
+          <p>
+            <span className="icon"><FaComment /></span>
+            {comentarios}
+          </p>
+          <p>
+            <span className="icon"><FaCalendarAlt /></span>
+            {createdAt}
+          </p>
         </div>
       </a>
     </div>
