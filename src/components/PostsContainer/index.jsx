@@ -19,16 +19,16 @@ function PostsContainer() {
         console.log(e);
         setError(true);
       }
+      setLoading(false);
     }
     fetchPosts();
-    setLoading(false);
   }, []);
 
   console.log(posts[9]);
   return (
     <div>
       {!loading && error && 'Houve um erro, por favor tente novamente mais tarde'}
-      {!error && loading && 'loading'}
+      {!error && loading && 'loading...'}
       <div className="post-container">
         {posts.length > 0 && posts.map(({
           uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm, link,
