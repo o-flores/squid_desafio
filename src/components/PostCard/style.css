@@ -43,7 +43,7 @@
   100% { opacity: 1 }
 }
 
-@media screen and (min-width: 992px)  {
+@media screen and (min-width: 1400px)  {
   .post-card img {
     width: 200px;
     height: 200px;
