@@ -31,7 +31,7 @@ function PostsContainer() {
       {!error && loading && 'loading'}
       <div className="post-container">
         {posts.length > 0 && posts.map(({
-          uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm,
+          uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm, link,
         }) => (
           <PostCard
             key={uid}
@@ -41,6 +41,7 @@ function PostsContainer() {
             comentarios={comentarios}
             upvotes={upvotes}
             criadoEm={criadoEm}
+            link={link}
           />
         ))}
       </div>
