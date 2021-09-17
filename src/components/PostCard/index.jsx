@@ -5,6 +5,11 @@ import './style.css';
 function PostCard({
   imagens, legenda, username, comentarios, upvotes, criadoEm, link,
 }) {
+  const ano = criadoEm.slice(0, 4);
+  const mes = criadoEm.slice(5, 7);
+  const dia = criadoEm.slice(8, 10);
+  const hora = criadoEm.slice(11, 16);
+  const createdAt = `${dia}/${mes}/${ano} ${hora}`;
   return (
     <div className="post-card">
       <a href={link} target="_blank" rel="noreferrer">
@@ -13,10 +18,10 @@ function PostCard({
           alt={legenda}
         />
         <div className="post-infos">
-          <span>{`@${username}`}</span>
-          <span>{upvotes}</span>
-          <span>{comentarios}</span>
-          <span>{criadoEm}</span>
+          <p>{`@${username}`}</p>
+          <p>{upvotes}</p>
+          <p>{comentarios}</p>
+          <p>{createdAt}</p>
         </div>
       </a>
     </div>
