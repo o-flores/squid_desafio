@@ -9,4 +9,20 @@
 
 .post-infos {
   display: none;
+  /* opacity: 0; */
+}
+
+
+.post-card:hover .post-infos {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  height: 150px;
+  width: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
 }
