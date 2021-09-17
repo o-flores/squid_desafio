@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaSpinner } from 'react-icons/fa';
 import PostCard from '../PostCard';
 import './style.css';
 
@@ -24,11 +25,19 @@ function PostsContainer() {
     fetchPosts();
   }, []);
 
-  console.log(posts[9]);
   return (
     <div>
-      {!loading && error && 'Houve um erro, por favor tente novamente mais tarde'}
-      {!error && loading && 'loading...'}
+      {!loading && error && (
+        <p className="error-message">
+          Houve um erro, por favor tente novamente mais tarde
+        </p>
+      )}
+      {!error && loading && (
+        <span className="loading-message">
+          <FaSpinner className="spinner" />
+          Carregando...
+        </span>
+      )}
       <div className="post-container">
         {posts.length > 0 && posts.map(({
           uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm, link,
