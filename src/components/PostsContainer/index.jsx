@@ -39,7 +39,7 @@ function PostsContainer() {
         </span>
       )}
       <div className="post-container">
-        {posts.length > 0 && posts.map(({
+        {!error && posts.length > 0 && posts.map(({
           uid, legenda, imagens, usuario: { username }, comentarios, upvotes, criadoEm, link,
         }) => (
           <PostCard
