@@ -23,8 +23,8 @@
   width: 150px;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
-  animation: fade-in 0.3s;
+  justify-content: center;
+  animation: fade-in 0.7s;
 }
 
 .post-infos p {
